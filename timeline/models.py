@@ -9,10 +9,10 @@ from cassandra.cqlengine.models import Model
 
 
 class Comment_by_Author(Model):
-    id = columns.UUID(primary_key=True, default=uuid.uuid4)
-    author = columns.Integer(primary_key=True)
+    id        = columns.UUID(primary_key=True, default=uuid.uuid4)
+    author    = columns.Integer(primary_key=True)
     recipient = columns.Integer(index=True)
-    message = columns.Text()
+    message   = columns.Text()
 
 
 class integerModel(Model):
